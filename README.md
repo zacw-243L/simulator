@@ -1,4 +1,4 @@
-# analog-counter-wheel
+# Analog-counter-wheel
 
 ![2022-11-17 19-35-01 2022-11-17 19_36_14](https://user-images.githubusercontent.com/3372598/202575252-35f53137-7ae3-4a83-9d51-2964a6f46da9.gif)
 
@@ -6,9 +6,6 @@ This is a proof of concept element, inspired by the UIKit [PickerView](https://w
 It is mainly designed to be a read-only component used to display information.
 But it can also be used as an input using the mouse-wheel.
 Note that, direct manipulation by touch or by mouse gesture is not present at the moment, so adding supplementary buttons is recommended if you want to use it as an input.
-
-# Live Demo
-https://victornpb.github.io/analog-counter-wheel/counterWheel.html
 
 # Documentation
 To create an analog-counter-wheel component you just need a div 
