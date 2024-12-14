@@ -1,168 +1,259 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
+	<meta charset="UTF-8">
+	<title>Untitled Document</title>
 
-<link rel="stylesheet" href="counter.css" type="text/css" charset="utf-8">
-<script type="text/javascript" src="counter.js"></script>
+	<link rel="stylesheet" href="counter.css" type="text/css" charset="utf-8">
+	<script type="text/javascript" src="counter.js"></script>
 
-<style type="text/css">
-/* CSS GOES HERE */
-body{
-	font-family: Helvetica, Arial, sans-serif;
-	background-color: #D6D6D6;
-	margin: 8em;
-}
+	<style type="text/css">
+		/* CSS GOES HERE */
+		body {
+			background-color: #292929;
+			/* Inverted from #D6D6D6 */
+			margin: 8em;
+			color: #e0e0e0;
+			/* Light color for text on dark background */
+		}
 
-content > div{
-	padding: 2em;
-}
+		content>div {
+			padding: 2em;
+		}
 
-#apDiv1 {
+		#apDiv1 {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
 
-}
+		}
 
-.counter{
-	-width: 20px;
-	-height: 30px;
-	z-index: 1;
-	
-	border: 2px inset #666;
-}
-.counter .wheel{
-	-margin-top: 5px;
-	-width: 20px;
-	-height: 30px;
-	-font-size: 20px;
-}
+		.counter {
+			-width: 20px;
+			-height: 30px;
+			z-index: 1;
 
-span{
-	display:inline-block;
-}
-span button{
-	display:block;
-	width: 100%;
-	font-weight: bold;
-}
+			border: 2px inset #666;
+		}
 
+		.counter .wheel {
+			-margin-top: 5px;
+			-width: 20px;
+			-height: 30px;
+			-font-size: 20px;
+		}
 
-#d8.counter{
-	width: 150px;
-	-height: 30px;
-	z-index: 1;
-	
-	border: 2px inset #666;
-}
-#d8.counter .wheel{
-	-margin-top: 5px;
-	width: 150px;
-	height: 40px;
-	font-size: 20px;
-}
-</style>
+		span {
+			display: inline-block;
+		}
 
+		span button {
+			display: block;
+			width: 100%;
+			font-weight: bold;
+		}
+
+		#d10.counter {
+			width: 150px;
+			-height: 30px;
+			z-index: 1;
+
+			border: 2px inset #666;
+		}
+
+		#d10.counter .wheel {
+			-margin-top: 5px;
+			width: 150px;
+			height: 40px;
+			font-size: 20px;
+		}
+
+		.controls {
+			margin-left: auto;
+			display: flex;
+			flex-direction: column;
+			gap: 0.5em;
+		}
+
+		.controls button {
+			padding: 0.5em 1em;
+			font-size: 1em;
+			cursor: pointer;
+			background-color: #444;
+			color: #e0e0e0;
+			border: none;
+			border-radius: 4px;
+		}
+
+		.controls button:hover {
+			background-color: #666;
+		}
+	</style>
 
 </head>
 
 <body>
 
-<header>
-    <h1>This is a blank HTML5 template.</h1>
-</header>
-<content>
+	<header>
+		<h1>This is a blank HTML5 template.</h1>
+	</header>
+	<content>
 
-<p>Hello, this is a blank HTML5 template</p>
-	
-<div id="apDiv1">
+		<p>Hello, this is a blank HTML5 template</p>
 
-	<span>
-		<button id="minus1">-</button>
-		<div id="d1" class="counter">0</div>
-		<button id="plus1">+</button>
-	</span>
-	
-	<span>
-		<button id="minus2">-</button>
-		<div id="d2" class="counter">0</div>
-		<button id="plus2">+</button>
-	</span>
-	
-	<span>
-		<button id="plus3">+</button>
-		<div id="d3" class="counter">0</div>
-		<button id="minus3">-</button>
-	</span>
-	
-	<span>
-		<button id="plus4">+</button>
-		<div id="d4" class="counter">0</div>
-		<button id="minus4">-</button>
-	</span>
+		<div id="apDiv1">
 
-</div>
+			<span>
+				<button id="minus1">-</button>
+				<div id="d1" class="counter">0</div>
+				<button id="plus1">+</button>
+			</span>
 
-<div>
-	Inverted
-	<div id="d5" class="counter">0</div>
-</div>
+			<span>
+				<button id="minus2">-</button>
+				<div id="d2" class="counter">0</div>
+				<button id="plus2">+</button>
+			</span>
 
+			<span>
+				<button id="plus3">+</button>
+				<div id="d3" class="counter">0</div>
+				<button id="minus3">-</button>
+			</span>
 
-<div>
-	Custom
-	<div id="d6" class="counter">1|2|3</div>
-</div>
+			<span>
+				<button id="plus4">+</button>
+				<div id="d4" class="counter">0</div>
+				<button id="minus4">-</button>
+			</span>
 
-<div>
-	Custom 2
-	<div id="d7" class="counter">A|B|C|d|e|f</div>
-</div>
+			<span>
+				<button id="plus3">+</button>
+				<div id="d5" class="counter">0</div>
+				<button id="minus3">-</button>
+			</span>
 
-<div>
-	Custom 2
-	<div id="d8" class="counter">Apples|Oranges|Bannanas|Pineaples|Lemons</div>
-</div>
+			<span>
+				<button id="plus4">+</button>
+				<div id="d6" class="counter">0</div>
+				<button id="minus4">-</button>
+			</span>
 
+			<div class="controls">
+				<button id="fastRate">Fast Rate</button>
+				<button id="slowRate">Slow Rate</button>
+				<button id="stop">Stop</button>
+			</div>
+		</div>
 
-</content>
-<footer>
-    Footer goes here
-</footer>
+		<div>
+			Inverted
+			<div id="d7" class="counter">0</div>
+		</div>
 
-<script type="text/javascript">
-/* JAVASCRIPT GOES HERE */
-window.onload=function(){
-		
-	c1 = new Counter(d1);
-	plus1.onclick = function(e){c1.next(); console.log(e); };
-	minus1.onclick = function(){ c1.previous(); };
-	
-	c2 = new Counter(d2);
-	plus2.onclick = function(){ c2.next(); };
-	minus2.onclick = function(){ c2.previous(); };
-	
-	c3 = new Counter(d3);
-	plus3.onclick = function(){ c3.next(); };
-	minus3.onclick = function(){ c3.previous(); };
-	
-	c4 = new Counter(d4);
-	plus4.onclick = function(){ c4.next(); };
-	minus4.onclick = function(){ c4.previous(); };
-	
-	c1.onChange = function(){
-		console.log("pos changed to "+this.pos);
-	}
+		<div>
+			Custom
+			<div id="d8" class="counter">1|2|3</div>
+		</div>
+
+		<div>
+			Custom 2
+			<div id="d9" class="counter">A|B|C|d|e|f</div>
+		</div>
+
+		<div>
+			Custom 2
+			<div id="d10" class="counter">Apples|Oranges|Bannanas|Pineaples|Lemons</div>
+		</div>
 
 
-	d5 = new Counter(d5);
-	d5.options.inverted = true;
+	</content>
+	<footer>
+		Footer goes here
+	</footer>
 
-	d6 = new Counter(d6);
-	d7 = new Counter(d7);
-	d8 = new Counter(d8);
-};
+	<script type="text/javascript">
+		/* JAVASCRIPT GOES HERE */
+		window.onload = function () {
 
-</script>
-  
+			c1 = new Counter(d1);
+			plus1.onclick = function (e) { c1.next(); console.log(e); };
+			minus1.onclick = function () { c1.previous(); };
+
+			c2 = new Counter(d2);
+			plus2.onclick = function () { c2.next(); };
+			minus2.onclick = function () { c2.previous(); };
+
+			c3 = new Counter(d3);
+			plus3.onclick = function () { c3.next(); };
+			minus3.onclick = function () { c3.previous(); };
+
+			c4 = new Counter(d4);
+			plus4.onclick = function () { c4.next(); };
+			minus4.onclick = function () { c4.previous(); };
+
+			c5 = new Counter(d5);
+			plus4.onclick = function () { c4.next(); };
+			minus4.onclick = function () { c4.previous(); };
+
+			c6 = new Counter(d6);
+			plus4.onclick = function () { c4.next(); };
+			minus4.onclick = function () { c4.previous(); };
+
+			c1.onChange = function () {
+				console.log("pos changed to " + this.pos);
+			}
+
+			d7 = new Counter(d7);
+			d7.options.inverted = true;
+
+			d8 = new Counter(d8);
+			d9 = new Counter(d9);
+			d10 = new Counter(d10);
+
+			let slowInterval, fastInterval;
+
+			function startCounter(speed) {
+				const counters = [d6, d5, d4, d3, d2, d1].map(el => new Counter(el));
+				return setInterval(() => {
+					let carry = true; // Start with the assumption that we need to carry over
+					for (let i = 0; i < counters.length; i++) {
+						if (carry) {
+							if (counters[i].pos < 9) {
+								counters[i].next(); // Increment the current counter
+								carry = false; // Stop carrying over
+							} else {
+								counters[i].setValue(0); // Reset current counter to 0
+							}
+						} else {
+							break; // Stop processing once carry is resolved
+						}
+					}
+				}, speed);
+			}
+
+
+			document.getElementById('slowRate').onclick = function () {
+				clearInterval(slowInterval);
+				clearInterval(fastInterval);
+				slowInterval = startCounter(1000);
+			};
+
+			document.getElementById('fastRate').onclick = function () {
+				clearInterval(slowInterval);
+				clearInterval(fastInterval);
+				fastInterval = startCounter(100);
+			};
+
+			document.getElementById('stop').onclick = function () {
+				clearInterval(slowInterval);
+				clearInterval(fastInterval);
+			};
+		};
+
+	</script>
+
 </body>
+
 </html>

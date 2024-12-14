@@ -50,10 +50,16 @@ function Counter(counterElement){
 	
 }
 
-Counter.prototype.setValue = function(value){
-	var pos = this.values.indexOf(value);
-	if(pos>=0) return this.setPos(pos);
-	else throw new Error('"'+value+'" is not a item on Counter.values[]');
+Counter.prototype.setValue = function(value) {
+    if (typeof value !== "string") {
+        value = value.toString(); // Convert numeric value to string
+    }
+    var pos = this.values.indexOf(value);
+    if (pos >= 0) {
+        return this.setPos(pos);
+    } else {
+        throw new Error('"' + value + '" is not an item on Counter.values[]');
+    }
 };
 
 Counter.prototype.getValue = function(){
