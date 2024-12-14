@@ -1,7 +1,5 @@
 # Analog-counter-wheel
 
-![2022-11-17 19-35-01 2022-11-17 19_36_14](https://user-images.githubusercontent.com/3372598/202575252-35f53137-7ae3-4a83-9d51-2964a6f46da9.gif)
-
 This is a proof of concept element, inspired by the UIKit [PickerView](https://web.archive.org/web/20141025132854/http://www.mlsite.net/blog/wp-content/uploads/2009/06/Picture_1.png) [Doc](https://developer.apple.com/documentation/uikit/uipickerview?language=objc)
 It is mainly designed to be a read-only component used to display information.
 But it can also be used as an input using the mouse-wheel.
