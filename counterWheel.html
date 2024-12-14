@@ -216,7 +216,7 @@
 
 			let slowInterval, fastInterval;
 			let currentInterval = null;
-			let currentSpeed = 1000;
+			let currentSpeed = 1500;
 			const counters = [d6, d5, d4, d3, d2, d1].map(el => new Counter(el));
 
 			function startCounter(speed) {
@@ -243,8 +243,8 @@
 				}
 			};
 			document.getElementById('slowRate').onclick = function () {
-				if (currentSpeed !== 1000) {
-					currentSpeed = 1000;
+				if (currentSpeed !== 3000) {
+					currentSpeed = 3000;
 					if (currentInterval) {
 						clearInterval(currentInterval);
 						currentInterval = startCounter(currentSpeed);
@@ -253,8 +253,8 @@
 			};
 
 			document.getElementById('fastRate').onclick = function () {
-				if (currentSpeed !== 200) {
-					currentSpeed = 200;
+				if (currentSpeed !== 1500) {
+					currentSpeed = 1500;
 					if (currentInterval) {
 						clearInterval(currentInterval);
 						currentInterval = startCounter(currentSpeed);
