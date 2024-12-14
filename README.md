@@ -23,8 +23,7 @@ This will instantiate a new component and initialize it.
   > [Array] of the possible values  
   >  e.g.:`["A","B","C","D","E","F"];`
 
-  ![2022-11-17 19-37-07 2022-11-17 19_37_37](https://user-images.githubusercontent.com/3372598/202575360-1f9b56bb-45dd-4353-a272-3c4554e11d7b.gif)
-  ![2022-11-17 19-37-55 2022-11-17 19_38_31](https://user-images.githubusercontent.com/3372598/202575375-73528969-d87b-49b4-a9fc-9c07e0c08a2f.gif)
+
 
 
 #### Options
