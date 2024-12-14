@@ -146,7 +146,7 @@
 				<button id="slowRate">Slow Rate</button>
 				<button id="stop">Stop</button>
 			</div>
-			
+
 		</div>
 
 		<div>
@@ -215,9 +215,11 @@
 			d10 = new Counter(d10);
 
 			let slowInterval, fastInterval;
+			let currentInterval = null;
+			let currentSpeed = 1000;
+			const counters = [d6, d5, d4, d3, d2, d1].map(el => new Counter(el));
 
 			function startCounter(speed) {
-				const counters = [d6, d5, d4, d3, d2, d1].map(el => new Counter(el));
 				return setInterval(() => {
 					let carry = true; // Start with the assumption that we need to carry over
 					for (let i = 0; i < counters.length; i++) {
@@ -235,22 +237,34 @@
 				}, speed);
 			}
 
-
+			document.getElementById('start').onclick = function () {
+				if (!currentInterval) {
+					currentInterval = startCounter(currentSpeed);
+				}
+			};
 			document.getElementById('slowRate').onclick = function () {
-				clearInterval(slowInterval);
-				clearInterval(fastInterval);
-				slowInterval = startCounter(1000);
+				if (currentSpeed !== 1000) {
+					currentSpeed = 1000;
+					if (currentInterval) {
+						clearInterval(currentInterval);
+						currentInterval = startCounter(currentSpeed);
+					}
+				}
 			};
 
 			document.getElementById('fastRate').onclick = function () {
-				clearInterval(slowInterval);
-				clearInterval(fastInterval);
-				fastInterval = startCounter(100);
+				if (currentSpeed !== 200) {
+					currentSpeed = 200;
+					if (currentInterval) {
+						clearInterval(currentInterval);
+						currentInterval = startCounter(currentSpeed);
+					}
+				}
 			};
 
 			document.getElementById('stop').onclick = function () {
-				clearInterval(slowInterval);
-				clearInterval(fastInterval);
+				clearInterval(currentInterval);
+				currentInterval = null;
 			};
 		};
 
